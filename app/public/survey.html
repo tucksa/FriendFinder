@@ -11,30 +11,41 @@
                 margin:5%;
             }
         </style>
+        <script src="https://code.jquery.com/jquery.js"></script>
     </head>
     <body>
+        <form>
+            <div class="question form-group">
+                <label for="friendName">Name</label>
+                <input class="form-control" id="friendName" placeholder="Jane Doe">
+            </div>
+            <div class="question form-group">
+                <label for="friendPic">Picture address</label>
+                <input class="form-control" id="friendPic" placeholder="http//:whatever.com">
+            </div>
+        </form>
         <div class= "question">
             <div>
                 <h3>My ideal weekend is taking it easy and watching a movie.</h3>
             </div>
             <div class="myopt form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="ques1" id="opt1" value="1">
+                <input class="form-check-input" type="radio" name="ques1"  value="1">
                 <label class="form-check-label" for="inlineRadio1">1</label>
             </div>
             <div class="myopt form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="ques1" id="opt2" value="2">
+                <input class="form-check-input" type="radio" name="ques1"  value="2">
                 <label class="form-check-label" for="inlineRadio2">2</label>
             </div>
             <div class="myopt form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="ques1" id="opt3" value="3">
+                <input class="form-check-input" type="radio" name="ques1"  value="3">
                 <label class="form-check-label" for="inlineRadio3">3 </label>
             </div>
             <div class="myopt form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="ques1" id="opt4" value="4">
+                <input class="form-check-input" type="radio" name="ques1"  value="4">
                 <label class="form-check-label" for="inlineRadio4">4</label>
             </div>
             <div class="myopt form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="ques1" id="opt5" value="5">
+                <input class="form-check-input" type="radio" name="ques1" value="5">
                 <label class="form-check-label" for="inlineRadio5">5</label>
             </div>
         </div>
@@ -44,23 +55,23 @@
                 <h3>Time off is all about food! I want to try out a new restaurant every weekend</h3>
             </div>
             <div class="myopt form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="ques2" id="opt1" value="1">
+                <input class="form-check-input" type="radio" name="ques2"  value="1">
                 <label class="form-check-label" for="inlineRadio1">1</label>
             </div>
             <div class="myopt form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="ques2" id="opt2" value="2">
+                <input class="form-check-input" type="radio" name="ques2"  value="2">
                 <label class="form-check-label" for="inlineRadio2">2</label>
             </div>
             <div class="myopt form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="ques2" id="opt3" value="3">
+                <input class="form-check-input" type="radio" name="ques2"  value="3">
                 <label class="form-check-label" for="inlineRadio3">3 </label>
             </div>
             <div class="myopt form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="ques2" id="opt4" value="4">
+                <input class="form-check-input" type="radio" name="ques2"  value="4">
                 <label class="form-check-label" for="inlineRadio4">4</label>
             </div>
             <div class="myopt form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="ques2" id="opt5" value="5">
+                <input class="form-check-input" type="radio" name="ques2" value="5">
                 <label class="form-check-label" for="inlineRadio5">5</label>
             </div>
         </div>
@@ -70,23 +81,23 @@
                 <h3>I am on the look out for an adventure- sky diving, parasailing, something that really gets my heart racing!</h3>
             </div>
             <div class="myopt form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="ques3" id="opt1" value="1">
+                <input class="form-check-input" type="radio" name="ques3"  value="1">
                 <label class="form-check-label" for="inlineRadio1">1</label>
             </div>
             <div class="myopt form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="ques3" id="opt2" value="2">
+                <input class="form-check-input" type="radio" name="ques3"  value="2">
                 <label class="form-check-label" for="inlineRadio2">2</label>
             </div>
             <div class="myopt form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="ques3" id="opt3" value="3">
+                <input class="form-check-input" type="radio" name="ques3"  value="3">
                 <label class="form-check-label" for="inlineRadio3">3 </label>
             </div>
             <div class="myopt form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="ques3" id="opt4" value="4">
+                <input class="form-check-input" type="radio" name="ques3"  value="4">
                 <label class="form-check-label" for="inlineRadio4">4</label>
             </div>
             <div class="myopt form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="ques3" id="opt5" value="5">
+                <input class="form-check-input" type="radio" name="ques3" value="5">
                 <label class="form-check-label" for="inlineRadio5">5</label>
             </div>
         </div>
@@ -96,23 +107,23 @@
                 <h3>Books, Books, Books! Maybe coffee too.</h3>
             </div>
             <div class="myopt form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="ques4" id="opt1" value="1">
+                <input class="form-check-input" type="radio" name="ques4"  value="1">
                 <label class="form-check-label" for="inlineRadio1">1</label>
             </div>
             <div class="myopt form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="ques4" id="opt2" value="2">
+                <input class="form-check-input" type="radio" name="ques4"  value="2">
                 <label class="form-check-label" for="inlineRadio2">2</label>
             </div>
             <div class="myopt form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="ques4" id="opt3" value="3">
+                <input class="form-check-input" type="radio" name="ques4"  value="3">
                 <label class="form-check-label" for="inlineRadio3">3 </label>
             </div>
             <div class="myopt form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="ques4" id="opt4" value="4">
+                <input class="form-check-input" type="radio" name="ques4"  value="4">
                 <label class="form-check-label" for="inlineRadio4">4</label>
             </div>
             <div class="myopt form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="ques4" id="opt5" value="5">
+                <input class="form-check-input" type="radio" name="ques4" value="5">
                 <label class="form-check-label" for="inlineRadio5">5</label>
             </div>
         </div>
@@ -122,23 +133,23 @@
                 <h3>Confession....I'm a shopaholic. Can't we just hang out at the mall?</h3>
             </div>
             <div class="myopt form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="ques5" id="opt1" value="1">
+                <input class="form-check-input" type="radio" name="ques5"  value="1">
                 <label class="form-check-label" for="inlineRadio1">1</label>
             </div>
             <div class="myopt form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="ques5" id="opt2" value="2">
+                <input class="form-check-input" type="radio" name="ques5"  value="2">
                 <label class="form-check-label" for="inlineRadio2">2</label>
             </div>
             <div class="myopt form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="ques5" id="opt3" value="3">
+                <input class="form-check-input" type="radio" name="ques5"  value="3">
                 <label class="form-check-label" for="inlineRadio3">3 </label>
             </div>
             <div class="myopt form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="ques5" id="opt4" value="4">
+                <input class="form-check-input" type="radio" name="ques5"  value="4">
                 <label class="form-check-label" for="inlineRadio4">4</label>
             </div>
             <div class="myopt form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="ques5" id="opt5" value="5">
+                <input class="form-check-input" type="radio" name="ques5" value="5">
                 <label class="form-check-label" for="inlineRadio5">5</label>
             </div>
         </div>
@@ -148,23 +159,23 @@
                 <h3>I feel most relaxed in nature. I want to find a hiking buddy.</h3>
             </div>
             <div class="myopt form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="ques6" id="opt1" value="1">
+                <input class="form-check-input" type="radio" name="ques6"  value="1">
                 <label class="form-check-label" for="inlineRadio1">1</label>
             </div>
             <div class="myopt form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="ques6" id="opt2" value="2">
+                <input class="form-check-input" type="radio" name="ques6"  value="2">
                 <label class="form-check-label" for="inlineRadio2">2</label>
             </div>
             <div class="myopt form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="ques6" id="opt3" value="3">
+                <input class="form-check-input" type="radio" name="ques6"  value="3">
                 <label class="form-check-label" for="inlineRadio3">3 </label>
             </div>
             <div class="myopt form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="ques6" id="opt4" value="4">
+                <input class="form-check-input" type="radio" name="ques6"  value="4">
                 <label class="form-check-label" for="inlineRadio4">4</label>
             </div>
             <div class="myopt form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="ques6" id="opt5" value="5">
+                <input class="form-check-input" type="radio" name="ques6" value="5">
                 <label class="form-check-label" for="inlineRadio5">5</label>
             </div>
         </div>
@@ -174,23 +185,23 @@
                 <h3>Paint ball? Gun range? Axe throwing?</h3>
             </div>
             <div class="myopt form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="ques7" id="opt1" value="1">
+                <input class="form-check-input" type="radio" name="ques7"  value="1">
                 <label class="form-check-label" for="inlineRadio1">1</label>
             </div>
             <div class="myopt form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="ques7" id="opt2" value="2">
+                <input class="form-check-input" type="radio" name="ques7"  value="2">
                 <label class="form-check-label" for="inlineRadio2">2</label>
             </div>
             <div class="myopt form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="ques7" id="opt3" value="3">
+                <input class="form-check-input" type="radio" name="ques7"  value="3">
                 <label class="form-check-label" for="inlineRadio3">3 </label>
             </div>
             <div class="myopt form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="ques7" id="opt4" value="4">
+                <input class="form-check-input" type="radio" name="ques7"  value="4">
                 <label class="form-check-label" for="inlineRadio4">4</label>
             </div>
             <div class="myopt form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="ques7" id="opt5" value="5">
+                <input class="form-check-input" type="radio" name="ques7" value="5">
                 <label class="form-check-label" for="inlineRadio5">5</label>
             </div>
         </div>
@@ -200,23 +211,23 @@
                 <h3>All I need is a good beer and some conversation.</h3>
             </div>
             <div class="myopt form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="ques8" id="opt1" value="1">
+                <input class="form-check-input" type="radio" name="ques8"  value="1">
                 <label class="form-check-label" for="inlineRadio1">1</label>
             </div>
             <div class="myopt form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="ques8" id="opt2" value="2">
+                <input class="form-check-input" type="radio" name="ques8"  value="2">
                 <label class="form-check-label" for="inlineRadio2">2</label>
             </div>
             <div class="myopt form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="ques8" id="opt3" value="3">
+                <input class="form-check-input" type="radio" name="ques8"  value="3">
                 <label class="form-check-label" for="inlineRadio3">3 </label>
             </div>
             <div class="myopt form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="ques8" id="opt4" value="4">
+                <input class="form-check-input" type="radio" name="ques8"  value="4">
                 <label class="form-check-label" for="inlineRadio4">4</label>
             </div>
             <div class="myopt form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="ques8" id="opt5" value="5">
+                <input class="form-check-input" type="radio" name="ques8" value="5">
                 <label class="form-check-label" for="inlineRadio5">5</label>
             </div>
         </div>
@@ -226,23 +237,23 @@
                 <h3>I'm a bit of a nerd...science experiment?</h3>
             </div>
             <div class="myopt form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="ques9" id="opt1" value="1">
+                <input class="form-check-input" type="radio" name="ques9"  value="1">
                 <label class="form-check-label" for="inlineRadio1">1</label>
             </div>
             <div class="myopt form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="ques9" id="opt2" value="2">
+                <input class="form-check-input" type="radio" name="ques9"  value="2">
                 <label class="form-check-label" for="inlineRadio2">2</label>
             </div>
             <div class="myopt form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="ques9" id="opt3" value="3">
+                <input class="form-check-input" type="radio" name="ques9"  value="3">
                 <label class="form-check-label" for="inlineRadio3">3 </label>
             </div>
             <div class="myopt form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="ques9" id="opt4" value="4">
+                <input class="form-check-input" type="radio" name="ques9"  value="4">
                 <label class="form-check-label" for="inlineRadio4">4</label>
             </div>
             <div class="myopt form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="ques9" id="opt5" value="5">
+                <input class="form-check-input" type="radio" name="ques9" value="5">
                 <label class="form-check-label" for="inlineRadio5">5</label>
             </div>
         </div>
@@ -252,25 +263,53 @@
                 <h3>Actually, I'm a loner... not really sure why I'm even taking this survey.</h3>
             </div>
             <div class="myopt form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="ques10" id="opt1" value="1">
+                <input class="form-check-input" type="radio" name="ques10"  value="1">
                 <label class="form-check-label" for="inlineRadio1">1</label>
             </div>
             <div class="myopt form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="ques10" id="opt2" value="2">
+                <input class="form-check-input" type="radio" name="ques10"  value="2">
                 <label class="form-check-label" for="inlineRadio2">2</label>
             </div>
             <div class="myopt form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="ques10" id="opt3" value="3">
+                <input class="form-check-input" type="radio" name="ques10" value="3">
                 <label class="form-check-label" for="inlineRadio3">3 </label>
             </div>
             <div class="myopt form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="ques10" id="opt4" value="4">
+                <input class="form-check-input" type="radio" name="ques10"  value="4">
                 <label class="form-check-label" for="inlineRadio4">4</label>
             </div>
             <div class="myopt form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="ques10" id="opt5" value="5">
+                <input class="form-check-input" type="radio" name="ques10"  value="5">
                 <label class="form-check-label" for="inlineRadio5">5</label>
             </div>
         </div>
+
+        <button type="button" class="question btn btn-primary btn-lg" id="submit">Submit</button>
+    
+        <script type="text/javascript">
+            const ans= [];
+            $("input[type = 'radio']").on("click", function(){
+                ans.push(this.getAttribute("value"));
+                console.log(ans); 
+            });
+   
+            $("#submit").on("click", function(event) {
+                event.preventDefault();
+  
+      
+                const newFriend = {
+                    name: $("#friendName").val().trim(),
+                    photo: $("#friendPic").val().trim(),
+                    scores: ans
+                };
+  
+                console.log(newFriend);
+  
+                $.post("/api/friends", newFriend,
+                function(data) { 
+                    console.log(data) 
+                });
+            });
+        </script>
     </body>
 </html>

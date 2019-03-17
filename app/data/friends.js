@@ -129,4 +129,6 @@ const friends=[
             2
         ]
     }
-]
+];
+
+module.exports = friends;
