@@ -2,16 +2,20 @@
 <html>
     <head>
         <title>Survey</title>
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
         <style>
-            .myopt{
-                margin:2% 5% 0% 2%;
-            }
-            .question{
-                margin:5%;
-            }
+                .myopt{
+                    margin:2% 5% 0% 2%;
+                }
+                .question{
+                    margin:5%;
+                }
+                .myDisplay{
+                    height:45%;
+                    width:65%;
+                }
         </style>
-        <script src="https://code.jquery.com/jquery.js"></script>
     </head>
     <body>
         <form>
@@ -283,28 +287,70 @@
                 <label class="form-check-label" for="inlineRadio5">5</label>
             </div>
         </div>
+        <!-- Button trigger modal -->
 
-        <button type="button" class="question btn btn-primary btn-lg" id="submit">Submit</button>
-    
+      <button type="button" class="question btn btn-primary btn-lg" data-toggle="modal" data-target="#exampleModal" id="submit">Submit</button>
+      <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+      aria-hidden="true">
+      <div class="myDisplay modal-dialog" role="document">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Your Closest Match</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                  </button>
+              </div>
+              <div class="modal-body" id="details">
+                  <p id= "yourMatchName">Name: </p>
+                  <img src="#" id="yourMatchPic">
+              </div>
+              <div class="modal-footer">
+                  <a role="button" class="btn btn-secondary" data-dismiss="modal">Close</a>
+              </div>
+          </div>
+      </div>
+  </div>
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
         <script type="text/javascript">
             const ans= [];
             $("input[type = 'radio']").on("click", function(){
                 ans.push(this.getAttribute("value"));
                 console.log(ans); 
             });
-   
+            function render(){
+                $.ajax({ url: "/api/friends", method: "GET" })
+                .then(function(friendsData) {
+                    var diffArr=[];
+                    var total=0;
+                    for(let i=0; i<friendsData.length; i++){
+                        for(let j=0; j<10; j++){
+                            var diff= Math.abs(friendsData[i].scores[j]-ans[j]);
+                            total+= diff;
+                        } 
+                        diffArr.push(total);
+                        total = 0;
+                    }
+                    const similar= Math.min(...diffArr);
+                    const urFriend= diffArr.indexOf(similar);
+                    console.log(friendsData[urFriend]);
+                    $("#yourMatchName").append(friendsData[urFriend].name);
+                    $("#yourMatchPic").attr("src", friendsData[urFriend].photo);
+                });
+            }; 
+              
+
             $("#submit").on("click", function(event) {
                 event.preventDefault();
-  
-      
+                $('.modal').attr('aria-hidden', 'false');
+                render();
                 const newFriend = {
                     name: $("#friendName").val().trim(),
                     photo: $("#friendPic").val().trim(),
                     scores: ans
                 };
-  
-                console.log(newFriend);
-  
+                
                 $.post("/api/friends", newFriend,
                 function(data) { 
                     console.log(data) 
