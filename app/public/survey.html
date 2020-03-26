@@ -4,6 +4,7 @@
         <title>Survey</title>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+        <link rel="stylesheet" href= "./style.css">
         <style>
                 .myopt{
                     margin:2% 5% 0% 2%;
@@ -18,309 +19,96 @@
         </style>
     </head>
     <body>
-        <form>
-            <div class="question form-group">
-                <label for="friendName">Name</label>
-                <input class="form-control" id="friendName" placeholder="Jane Doe">
+        <div id = "container">
+            <form>
+                <div class="question form-group">
+                    <label for="friendName">Name</label>
+                    <input class="form-control" id="friendName" placeholder="Jane Doe">
+                </div>
+                <div class="question form-group">
+                    <label for="friendPic">Picture address</label>
+                    <input class="form-control" id="friendPic" placeholder="http//:whatever.com">
+                </div>
+            </form>
+            <div class= "question" id= 'quesDiv' style="display: none;">
+                <div>
+                    <h3 id= 'ques'></h3>
+                </div>
+                <div class="myopt form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="ques1"  value="1">
+                    <label class="form-check-label" for="inlineRadio1">1</label>
+                </div>
+                <div class="myopt form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="ques1"  value="2">
+                    <label class="form-check-label" for="inlineRadio2">2</label>
+                </div>
+                <div class="myopt form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="ques1"  value="3">
+                    <label class="form-check-label" for="inlineRadio3">3 </label>
+                </div>
+                <div class="myopt form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="ques1"  value="4">
+                    <label class="form-check-label" for="inlineRadio4">4</label>
+                </div>
+                <div class="myopt form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="ques1" value="5">
+                    <label class="form-check-label" for="inlineRadio5">5</label>
+                </div>
             </div>
-            <div class="question form-group">
-                <label for="friendPic">Picture address</label>
-                <input class="form-control" id="friendPic" placeholder="http//:whatever.com">
-            </div>
-        </form>
-        <div class= "question">
-            <div>
-                <h3>My ideal weekend is taking it easy and watching a movie.</h3>
-            </div>
-            <div class="myopt form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="ques1"  value="1">
-                <label class="form-check-label" for="inlineRadio1">1</label>
-            </div>
-            <div class="myopt form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="ques1"  value="2">
-                <label class="form-check-label" for="inlineRadio2">2</label>
-            </div>
-            <div class="myopt form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="ques1"  value="3">
-                <label class="form-check-label" for="inlineRadio3">3 </label>
-            </div>
-            <div class="myopt form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="ques1"  value="4">
-                <label class="form-check-label" for="inlineRadio4">4</label>
-            </div>
-            <div class="myopt form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="ques1" value="5">
-                <label class="form-check-label" for="inlineRadio5">5</label>
+            
+            <button type="button" class="question btn btn-primary btn-lg" id="btn">Begin</button>
+            
+            <!-- Button trigger modal -->
+    
+            <button type="button" class="question btn btn-primary btn-lg" data-toggle="modal" data-target="#exampleModal" id="submit" style="display: none;">Submit</button>
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+                <div class="myDisplay modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Your Closest Match</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body" id="details">
+                            <p id= "yourMatchName">Name: </p>
+                            <img src="#" id="yourMatchPic">
+                        </div>
+                        <div class="modal-footer">
+                            <a role="button" class="btn btn-secondary" data-dismiss="modal">Close</a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         
-        <div class= "question">
-            <div>
-                <h3>Time off is all about food! I want to try out a new restaurant every weekend</h3>
-            </div>
-            <div class="myopt form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="ques2"  value="1">
-                <label class="form-check-label" for="inlineRadio1">1</label>
-            </div>
-            <div class="myopt form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="ques2"  value="2">
-                <label class="form-check-label" for="inlineRadio2">2</label>
-            </div>
-            <div class="myopt form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="ques2"  value="3">
-                <label class="form-check-label" for="inlineRadio3">3 </label>
-            </div>
-            <div class="myopt form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="ques2"  value="4">
-                <label class="form-check-label" for="inlineRadio4">4</label>
-            </div>
-            <div class="myopt form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="ques2" value="5">
-                <label class="form-check-label" for="inlineRadio5">5</label>
-            </div>
-        </div>
-
-        <div class= "question">
-            <div>
-                <h3>I am on the look out for an adventure- sky diving, parasailing, something that really gets my heart racing!</h3>
-            </div>
-            <div class="myopt form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="ques3"  value="1">
-                <label class="form-check-label" for="inlineRadio1">1</label>
-            </div>
-            <div class="myopt form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="ques3"  value="2">
-                <label class="form-check-label" for="inlineRadio2">2</label>
-            </div>
-            <div class="myopt form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="ques3"  value="3">
-                <label class="form-check-label" for="inlineRadio3">3 </label>
-            </div>
-            <div class="myopt form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="ques3"  value="4">
-                <label class="form-check-label" for="inlineRadio4">4</label>
-            </div>
-            <div class="myopt form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="ques3" value="5">
-                <label class="form-check-label" for="inlineRadio5">5</label>
-            </div>
-        </div>
-
-        <div class= "question">
-            <div>
-                <h3>Books, Books, Books! Maybe coffee too.</h3>
-            </div>
-            <div class="myopt form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="ques4"  value="1">
-                <label class="form-check-label" for="inlineRadio1">1</label>
-            </div>
-            <div class="myopt form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="ques4"  value="2">
-                <label class="form-check-label" for="inlineRadio2">2</label>
-            </div>
-            <div class="myopt form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="ques4"  value="3">
-                <label class="form-check-label" for="inlineRadio3">3 </label>
-            </div>
-            <div class="myopt form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="ques4"  value="4">
-                <label class="form-check-label" for="inlineRadio4">4</label>
-            </div>
-            <div class="myopt form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="ques4" value="5">
-                <label class="form-check-label" for="inlineRadio5">5</label>
-            </div>
-        </div>
-
-        <div class= "question">
-            <div>
-                <h3>Confession....I'm a shopaholic. Can't we just hang out at the mall?</h3>
-            </div>
-            <div class="myopt form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="ques5"  value="1">
-                <label class="form-check-label" for="inlineRadio1">1</label>
-            </div>
-            <div class="myopt form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="ques5"  value="2">
-                <label class="form-check-label" for="inlineRadio2">2</label>
-            </div>
-            <div class="myopt form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="ques5"  value="3">
-                <label class="form-check-label" for="inlineRadio3">3 </label>
-            </div>
-            <div class="myopt form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="ques5"  value="4">
-                <label class="form-check-label" for="inlineRadio4">4</label>
-            </div>
-            <div class="myopt form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="ques5" value="5">
-                <label class="form-check-label" for="inlineRadio5">5</label>
-            </div>
-        </div>
-
-        <div class= "question">
-            <div>
-                <h3>I feel most relaxed in nature. I want to find a hiking buddy.</h3>
-            </div>
-            <div class="myopt form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="ques6"  value="1">
-                <label class="form-check-label" for="inlineRadio1">1</label>
-            </div>
-            <div class="myopt form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="ques6"  value="2">
-                <label class="form-check-label" for="inlineRadio2">2</label>
-            </div>
-            <div class="myopt form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="ques6"  value="3">
-                <label class="form-check-label" for="inlineRadio3">3 </label>
-            </div>
-            <div class="myopt form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="ques6"  value="4">
-                <label class="form-check-label" for="inlineRadio4">4</label>
-            </div>
-            <div class="myopt form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="ques6" value="5">
-                <label class="form-check-label" for="inlineRadio5">5</label>
-            </div>
-        </div>
-
-        <div class= "question">
-            <div>
-                <h3>Paint ball? Gun range? Axe throwing?</h3>
-            </div>
-            <div class="myopt form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="ques7"  value="1">
-                <label class="form-check-label" for="inlineRadio1">1</label>
-            </div>
-            <div class="myopt form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="ques7"  value="2">
-                <label class="form-check-label" for="inlineRadio2">2</label>
-            </div>
-            <div class="myopt form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="ques7"  value="3">
-                <label class="form-check-label" for="inlineRadio3">3 </label>
-            </div>
-            <div class="myopt form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="ques7"  value="4">
-                <label class="form-check-label" for="inlineRadio4">4</label>
-            </div>
-            <div class="myopt form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="ques7" value="5">
-                <label class="form-check-label" for="inlineRadio5">5</label>
-            </div>
-        </div>
-
-        <div class= "question">
-            <div>
-                <h3>All I need is a good beer and some conversation.</h3>
-            </div>
-            <div class="myopt form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="ques8"  value="1">
-                <label class="form-check-label" for="inlineRadio1">1</label>
-            </div>
-            <div class="myopt form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="ques8"  value="2">
-                <label class="form-check-label" for="inlineRadio2">2</label>
-            </div>
-            <div class="myopt form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="ques8"  value="3">
-                <label class="form-check-label" for="inlineRadio3">3 </label>
-            </div>
-            <div class="myopt form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="ques8"  value="4">
-                <label class="form-check-label" for="inlineRadio4">4</label>
-            </div>
-            <div class="myopt form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="ques8" value="5">
-                <label class="form-check-label" for="inlineRadio5">5</label>
-            </div>
-        </div>
-
-        <div class= "question">
-            <div>
-                <h3>I'm a bit of a nerd...science experiment?</h3>
-            </div>
-            <div class="myopt form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="ques9"  value="1">
-                <label class="form-check-label" for="inlineRadio1">1</label>
-            </div>
-            <div class="myopt form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="ques9"  value="2">
-                <label class="form-check-label" for="inlineRadio2">2</label>
-            </div>
-            <div class="myopt form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="ques9"  value="3">
-                <label class="form-check-label" for="inlineRadio3">3 </label>
-            </div>
-            <div class="myopt form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="ques9"  value="4">
-                <label class="form-check-label" for="inlineRadio4">4</label>
-            </div>
-            <div class="myopt form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="ques9" value="5">
-                <label class="form-check-label" for="inlineRadio5">5</label>
-            </div>
-        </div>
-
-        <div class= "question">
-            <div>
-                <h3>Actually, I'm a loner... not really sure why I'm even taking this survey.</h3>
-            </div>
-            <div class="myopt form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="ques10"  value="1">
-                <label class="form-check-label" for="inlineRadio1">1</label>
-            </div>
-            <div class="myopt form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="ques10"  value="2">
-                <label class="form-check-label" for="inlineRadio2">2</label>
-            </div>
-            <div class="myopt form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="ques10" value="3">
-                <label class="form-check-label" for="inlineRadio3">3 </label>
-            </div>
-            <div class="myopt form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="ques10"  value="4">
-                <label class="form-check-label" for="inlineRadio4">4</label>
-            </div>
-            <div class="myopt form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="ques10"  value="5">
-                <label class="form-check-label" for="inlineRadio5">5</label>
-            </div>
-        </div>
-        <!-- Button trigger modal -->
-
-      <button type="button" class="question btn btn-primary btn-lg" data-toggle="modal" data-target="#exampleModal" id="submit">Submit</button>
-      <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-      aria-hidden="true">
-      <div class="myDisplay modal-dialog" role="document">
-          <div class="modal-content">
-              <div class="modal-header">
-                  <h5 class="modal-title" id="exampleModalLabel">Your Closest Match</h5>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                      <span aria-hidden="true">&times;</span>
-                  </button>
-              </div>
-              <div class="modal-body" id="details">
-                  <p id= "yourMatchName">Name: </p>
-                  <img src="#" id="yourMatchPic">
-              </div>
-              <div class="modal-footer">
-                  <a role="button" class="btn btn-secondary" data-dismiss="modal">Close</a>
-              </div>
-          </div>
-      </div>
-  </div>
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
         <script type="text/javascript">
+            //array of questions
+            const question = ['My ideal weekend is taking it easy and watching a movie.', 
+                            'Time off is all about food! I want to try out a new restaurant every weekend', 
+                            'I am on the look out for an adventure- sky diving, parasailing, something that really gets my heart racing!',
+                            'Books, Books, Books! Maybe coffee too.',
+                            "Confession....I'm a shopaholic. Can't we just hang out at the mall?",
+                            'I feel most relaxed in nature. I want to find a hiking buddy.',
+                            'Paint ball? Gun range? Axe throwing?',
+                            'All I need is a good beer and some conversation.',
+                            "I'm a bit of a nerd...science experiment?",
+                            "Actually, I'm a loner... not really sure why I'm even taking this survey."
+                        ]
+            
             // Set up an empty array to store the selected answers
             const ans= [];
+            //track selected
+            let selected = ''
 
             //When the radio button is seleced push the answer selected into the answers array
             $("input[type = 'radio']").on("click", function(){
-                ans.push(this.getAttribute("value"));
-                console.log(ans); 
+                selected = this.getAttribute("value");
+                console.log(selected); 
             });
 
             //get the friends data points then loop through them to compare them with the answer array values. push thie array showing the difference into diffArr
@@ -346,10 +134,42 @@
                     $("#yourMatchPic").attr("src", friendsData[urFriend].photo);
                 });
             }; 
+            //index tracer
+            var i = 0
+            //Click "Begin" and hide form, show question, and change name of button
+            $("#btn").click(function(event){
+                event.preventDefault();
+                console.log(i)
+                if(i == 0){
+                    console.log(ans)
+                    $("#btn").html('Next')
+                    $("#ques").html(question[i])
+                    $("#quesDiv").show()
+                    $("form").hide()
+                    if(selected != ''){
+                        ans.push(selected)
+                    }
+                    i += 1
+                }else if(i<question.length -1){
+                    $("#ques").html(question[i])
+                    $('input[name=ques1]').attr('checked',false);
+                    ans.push(selected)
+                    console.log(ans)
+                    i+=1
+                }else{
+                    $("#ques").html(question[i])
+                    $("#btn").hide()
+                    $("#submit").show()
+                    ans.push(selected)
+                    $('input[name=ques1]').attr('checked',false);
+                }
+            })
               
             //Click submi and show the modal with the reuslts and post the data the user just entered to friends data api
             $("#submit").on("click", function(event) {
                 event.preventDefault();
+                $("#quesDiv").hide()
+                $("#submit").hide()
                 $('.modal').attr('aria-hidden', 'false');
                 render();
                 const newFriend = {
