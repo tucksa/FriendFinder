@@ -139,9 +139,7 @@
             //Click "Begin" and hide form, show question, and change name of button
             $("#btn").click(function(event){
                 event.preventDefault();
-                console.log(i)
                 if(i == 0){
-                    console.log(ans)
                     $("#btn").html('Next')
                     $("#ques").html(question[i])
                     $("#quesDiv").show()
@@ -154,7 +152,6 @@
                     $("#ques").html(question[i])
                     $('input[name=ques1]').attr('checked',false);
                     ans.push(selected)
-                    console.log(ans)
                     i+=1
                 }else{
                     $("#ques").html(question[i])
